@@ -6,7 +6,7 @@
 // hides error divs on startup of page
 $(window).load(function () {
     $('.errormsg').hide();
-    $('.lastmodstat').html('This webpage was last accessed on ' + document.lastModified);
+    $('.lastmodstat').html('This webpage was last modified on ' + document.lastModified);
     $('#sentmsg').html('Your message has been sent.')
 });
 
@@ -99,12 +99,15 @@ $(document).ready(function () {
                 isValidForm = true;
                 $('#erremail').hide();
             }
+        } else {
+            isValidForm = false;
         }
     }
 
     $('#submitbtn').click(function (e) {
         e.preventDefault();
 
+        isValidEmail();
         if (isValidForm) {
             $('#contactForm').submit();
             $('#contactForm').trigger('reset');
