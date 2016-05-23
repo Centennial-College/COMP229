@@ -1,0 +1,131 @@
+<!--
+	Developed by: Kevin Ma
+	Student #: 300867968
+	Last Modified: May 22, 2016
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kevin Ma - Home Page - COMP229</title>
+	<link rel="icon" href="Assets/favicon.png" type="image/x-icon">
+	<!-- CSS Section -->
+	<link rel="stylesheet" href="Contents/app.css" type="text/css">
+</head>
+
+<body>
+	<!--Header-->
+	<div class="home" id="home">
+		<header>
+			<span class="headerText">
+				<h1>H I,&nbsp;&nbsp;&nbsp;I ' M&nbsp;&nbsp;&nbsp;K E V I N</h1>
+				<h3>Undergraduate Student | Software Engineer</h3>
+				<a href="#aboutMe"><input type="button" value="WHO AM I?"></a>
+				<a href="#contactMe"><input type="button" value="GET IN TOUCH WITH ME!"></a>
+				<a href="#projects"><input type="button" value="SEE MY PORTFOLIO!"></a>
+			</span>
+		</header>
+	</div>
+
+	<!--Navigation-->
+	<nav>
+		<span class="menu-logo">
+			<img src="Assets/logo.png" alt="Personal Logo">
+		</span>
+		<span class="main-menu">
+			<a href="#home" class="current" id="homenav">HOME</a><a href="#aboutMe" id="aboutnav">ABOUT</a><a href="#contactMe" id="contactnav">CONTACT</a><a href="#projects" id="projectnav">PROJECTS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+	</nav>
+
+	<article>
+		<!--About Me-->
+		<div class="aboutme" id="aboutMe">
+			<br><br><br><br><br>
+			<h2 class="sectionheader">ABOUT ME</h2><hr>
+			<br><br>
+			<img src="Assets/profilepicture.jpg" alt="Picture of Me" class="profilepicture">
+			<p class="description" id="about">
+				I am an undergraduate student enrolled in the Software Engineering Technology Co-op Program at the Progress Campus of Centennial
+				College. Currently, I am in my second semester and taking four classes. Previously, I studied at Western University in
+				London, ON.
+			</p>
+			<div class="hobbies">
+				<h4 class="sectionSubHead">Some of my favourite activities are:</h4>
+				<ul>
+					<li class="hobbyItem">Developing Web Applications</li>
+					<li class="hobbyItem">Developing Application Softwares</li>
+					<li class="hobbyItem">Teaching</li>
+					<li class="hobbyItem">Reading Manga</li>
+					<li class="hobbyItem">Drawing</li>
+					<li class="hobbyItem">Sleeping</li>
+				</ul>
+			</div>
+			<div class="technicalSkills">
+				<h4 class="sectionSubHead">I have experience working with:</h4>
+				<ul>
+					<li class="skillsItem">C#</li>
+					<li class="skillsItem">DB2 SQL 10.5.5</li>
+					<li class="skillsItem">HTML5/CSS3</li>
+					<li class="skillsItem">JavaScript/jQuery</li>
+					<li class="skillsItem">RedHat Linux (CentOS-7)</li>
+					<li class="skillsItem">Microsoft Office 2013</li>
+				</ul>
+			</div>
+			<div class="websiteStats">
+				<p class="lastmodstat"></p>
+			</div>
+		</div>
+		<!--Contact Me-->
+		<div class="contactMe" id="contactMe">
+			<br><br><br><br><br>
+			<h2 class="sectionheader">CONTACT ME</h2><hr>
+			<br><br>
+			<p class="contactInstructions">
+				Thank you for your visit. I hope you enjoyed your stay. <br> Feel free to email me at <a href="mailto:kma45@my.centennialcollege.ca">kma45@my.centennialcollege.ca</a> or
+				send me a message below!
+			</p>
+			<form action="mailto:kma45@my.centennialcollege.ca" method="POST" class="contactForm" id="contactForm">
+				<input type="text" name="contactname" id="contactname" placeholder="Name* :" class="contactinput"><br><br>
+				<div class="errormsg" id="errname">HELLO FAT BOY</div>
+				<input type="text" name="contactemail" id="contactemail" placeholder="Email* :" class="contactinput"><br><br>
+				<div class="errormsg" id="erremail">HELLO FAT BO</div>
+				<input type="text" name="contactsubject" id="contactsubject" placeholder="Subject* :" class="contactinput"><br><br>
+				<div class="errormsg" id="errsubject">HELLO FAT </div>
+				<textarea name="message" id="message" rows="10" placeholder="Message* :" class="contactinput"></textarea><br>
+				<div class="errormsg" id="errmsg">FAT BOY</div>
+				<input type="button" value="Send Message" id="submitbtn">
+				<div class="errormsg" id="sentmsg"></div>
+			</form>
+		</div>
+		<!--Projects-->
+		<div class="projects" id="projects">
+			<br><br><br><br><br>
+			<h2 class="sectionheader">PORTFOLIO</h2>
+			<hr>
+			<br><br>
+			<p>Coming soon!</p>
+		</div>
+	</article>
+
+	<!--Footer-->
+	<footer>
+		<span class="footerText">
+			&copy;&nbsp;2016 Kevin Ma | Student #: 300867968. All Rights Reserved.
+			<ul>
+				<li class="footerLinks"><a href="https://www.facebook.com/kbma.kevin"><img src="Assets/facebook-icon.png" alt="Facebook Icon" height="30"></a></li>
+				<li class="footerLinks"><a href="https://www.instagram.com/nubiak77/"><img src="Assets/ig-icon.gif" alt="Instagram Icon" height="30"></a></li>
+				<li class="footerLinks"><a href="https://twitter.com/kevinkbma"><img src="Assets/twitter-icon.png" alt="Twitter icon" height="30"></a></li>
+				<li class="footerLinks"><a href="#contactMe"><img src="Assets/email-icon.png" alt="Email icon" height="30"></a></li>
+			</ul>
+		</span>
+	</footer>
+
+	<!-- JavaScript Section -->
+	<script src="Scripts/jquery-2.2.4.min.js"></script>
+	<script src="Scripts/app.js"></script>
+</body>
+
+</html>
