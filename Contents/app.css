@@ -15,6 +15,7 @@ input[type=button]{
     width: 50%;
     line-height: 250%;
     margin-top: 1%;
+    color: #337AB7;
 }
 a.current{
     background-color: #00BCD4;

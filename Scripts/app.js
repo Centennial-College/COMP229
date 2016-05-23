@@ -117,4 +117,8 @@ $(document).ready(function () {
             $('#sentmsg').show();
         }
     });
+    
+    $('#resetbtn').click(function(e){
+        $('.errormsg').hide()
+    })
 });

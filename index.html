@@ -13,8 +13,9 @@
 	<title>Kevin Ma - Home Page - COMP229</title>
 	<link rel="icon" href="Assets/favicon.png" type="image/x-icon">
 	<!-- CSS Section -->
-	<link rel="stylesheet" href="Contents/bootstrap.min.css" />
+	<link rel="stylesheet" href="Contents/bootstrap.min.css" type="text/css"/>
 	<link rel="stylesheet" href="Contents/app.css" type="text/css">
+	<!--<link rel="stylesheet" href="Contents/bootstrap.min.css" type="text/css"/>-->
 </head>
 
 <body>
@@ -25,9 +26,10 @@
 				<span class="headerText">
 				<h1>H I,&nbsp;&nbsp;&nbsp;I ' M&nbsp;&nbsp;&nbsp;K E V I N</h1>
 				<h3>Undergraduate Student | Software Engineer</h3>
-				<a href="#aboutMe"><input type="button" value="WHO AM I?"></a>
-				<a href="#contactMe"><input type="button" value="GET IN TOUCH WITH ME!"></a>
-				<a href="#projects"><input type="button" value="SEE MY PORTFOLIO!"></a>
+				<!--<a href="#aboutMe"><button class="btn">WHO AM I?</button></a>-->
+				<a href="#aboutMe"><input type="button" class="btn" value="WHO AM I?"></a>
+				<a href="#contactMe"><input type="button" class="btn" value="GET IN TOUCH WITH ME!"></a>
+				<a href="#projects"><input type="button" class="btn" value="SEE MY PORTFOLIO!"></a>
 			</span>
 			</header>
 		</div>
@@ -35,7 +37,7 @@
 		<!--Navigation-->
 		<nav>
 			<span class="menu-logo">
-			<img src="Assets/logo.png" alt="Personal Logo">
+			<img src="Assets/logo.png" alt="Personal Logo" class="img-responsive">
 		</span>
 			<span class="main-menu">
 			<a href="#home" class="current" id="homenav">HOME</a><a href="#aboutMe" id="aboutnav">ABOUT</a><a href="#contactMe" id="contactnav">CONTACT</a><a href="#projects" id="projectnav">PROJECTS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -49,7 +51,7 @@
 				<h2 class="sectionheader">ABOUT ME</h2>
 				<hr>
 				<br><br>
-				<img src="Assets/profilepicture.jpg" alt="Picture of Me" class="profilepicture">
+				<img src="Assets/profilepicture.jpg" alt="Picture of Me" class="profilepicture img-responsive">
 				<p class="description" id="about">
 					I am an undergraduate student enrolled in the Software Engineering Technology Co-op Program at the Progress Campus of Centennial
 					College. Currently, I am in my second semester and taking four classes. Previously, I studied at Western University
@@ -92,14 +94,16 @@
 				</p>
 				<form action="mailto:kma45@my.centennialcollege.ca" method="POST" class="contactForm" id="contactForm">
 					<input type="text" name="contactname" id="contactname" placeholder="Name* :" class="contactinput"><br><br>
-					<div class="errormsg" id="errname">HELLO FAT BOY</div>
+					<div class="errormsg" id="errname"></div>
 					<input type="text" name="contactemail" id="contactemail" placeholder="Email* :" class="contactinput"><br><br>
-					<div class="errormsg" id="erremail">HELLO FAT BO</div>
+					<div class="errormsg" id="erremail"></div>
 					<input type="text" name="contactsubject" id="contactsubject" placeholder="Subject* :" class="contactinput"><br><br>
-					<div class="errormsg" id="errsubject">HELLO FAT </div>
+					<div class="errormsg" id="errsubject"></div>
 					<textarea name="message" id="message" rows="10" placeholder="Message* :" class="contactinput"></textarea><br>
-					<div class="errormsg" id="errmsg">FAT BOY</div>
-					<input type="button" value="Send Message" id="submitbtn">
+					<div class="errormsg" id="errmsg"></div>
+					<!--<input type="button" class="btn btn-primary" value="Send Message" id="submitbtn">-->
+					<button class="btn btn-primary" id="submitbtn" type="submit">Send Message</button>
+					<button class="btn btn-danger" id="resetbtn" type="reset">Clear Form</button>
 					<div class="errormsg" id="sentmsg"></div>
 				</form>
 			</div>
