@@ -1,29 +1,24 @@
 // main JavaScript file
 // Developed by: Kevin Ma
 // Student #: 300867968
-// Last Modified: May 22, 2016
+// Last Modified: May 24, 2016
 
-// hides error divs on startup of page
-$(window).load(function () {
-    $('.errormsg').hide();
-    $('.lastmodstat').html('This webpage was last modified on ' + document.lastModified);
-    $('#sentmsg').html('Your message has been sent.')
-});
+(function () {
 
-// event handler for when document is ready
-$(document).ready(function () {
+    // hides error divs on startup of page
+    $(window).load(function () {
+        $('.errormsg').hide();
+        $('.lastmodstat').html('This webpage was last modified on ' + document.lastModified);
+        $('#sentmsg').html('Your message has been sent.')
+    });
 
     // the jquery .on() method attaches one or more event handlers for selected elements and child elements
     $('a[href^="#"]').on('click', function (event) {
 
         var target = $($(this).attr('href'));
 
-        if (target.length) {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-        }
+        $('html, body').animate({ scrollTop: target.offset().top }, 750)
+        event.preventDefault();
 
     });
 
@@ -43,13 +38,18 @@ $(document).ready(function () {
 
         // 4 sections, 4 ranges
         if (currentScroll >= homeTop && currentScroll < aboutTop - 100) {
-            $('.main-menu #homenav').addClass('current');
+            $('.navbar-collapse #homenav').addClass('current');
+            // need to blur the navbar anchors because bootstrap had a bug with my code, always focused the a without unfocusing
+            $('.navbar-collapse #homenav').blur();
         } else if (currentScroll >= aboutTop - 100 && currentScroll < contactTop - 100) {
-            $('.main-menu #aboutnav').addClass('current');
+            $('.navbar-collapse #aboutnav').addClass('current');
+            $('.navbar-collapse #aboutnav').blur();
         } else if (currentScroll >= contactTop - 100 && currentScroll < projectTop - 100) {
-            $('.main-menu #contactnav').addClass('current');
+            $('.navbar-collapse #contactnav').addClass('current');
+            $('.navbar-collapse #contactnav').blur();
         } else {
-            $('.main-menu #projectnav').addClass('current');
+            $('.navbar-collapse #projectnav').addClass('current');
+            $('.navbar-collapse #projectnav').blur();
         }
     });
 
@@ -117,8 +117,8 @@ $(document).ready(function () {
             $('#sentmsg').show();
         }
     });
-    
-    $('#resetbtn').click(function(e){
+
+    $('#resetbtn').click(function (e) {
         $('.errormsg').hide()
     })
-});
+})();
