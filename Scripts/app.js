@@ -9,7 +9,11 @@
     $(window).load(function () {
         $('.errormsg').hide();
         $('.lastmodstat').html('This webpage was last modified on ' + document.lastModified);
-        $('#sentmsg').html('Your message has been sent.')
+        $('#sentmsg').html('Your message has been sent. <a><span class="fa fa-remove"></span></a>')
+    });
+    
+    $('#sentmsg').click(function(){
+        $('#sentmsg').hide()
     });
 
     // the jquery .on() method attaches one or more event handlers for selected elements and child elements

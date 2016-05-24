@@ -3,6 +3,9 @@
 /*Student #: 300867968
 Last Modified: May 24, 2016*/
 
+body{
+    /*font-size: 3vmin;*/
+}
 a.current,
 .navbar-fixed-top .navbar-nav > li > a:hover{
       color: #000;
@@ -18,19 +21,21 @@ hr{
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #B6B6B6, rgba(0, 0, 0, 0));
 }
-input[type=button]{
+.home-btn{
     border:none;
     border-radius: 25px;
     width: 50%;
+    /*width: 50vmin;*/
     line-height: 250%;
     margin-top: 1%;
     color: #337AB7;
+    font-size: 2.5vmin;
 }
 .main-menu a{
     /*top right bottom left*/
     padding: 8% 10px 5.8%;
 }
-input[type=button]:hover{
+.home-btn:hover{
     background-color: #337AB7;
     color: #fff;
 }
@@ -64,11 +69,10 @@ nav{
 header h1{
     font-family: 'Times New Roman', Times, serif;
     color: #FFFFFF;
-    font-size: 300%;
-    margin-bottom: 0;
+    font-size: 9.5vmin;
 }
 header h3{
-    font-size: 80%;
+    font-size: 3.0vmin;
     color: #BBDEFB;
 }
 .hobbies{
