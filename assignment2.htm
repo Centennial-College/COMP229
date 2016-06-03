@@ -2,7 +2,7 @@
     Developed by: Kevin Ma
     Student #: 300867968
     Date Created: May 26, 2016
-    Date Last Modified: May 26, 2016
+    Date Last Modified: June 3, 2016
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -10,51 +10,93 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMP229 - Assignment 2</title>
+    <title>Kevin Ma - Assignment 2 - COMP229</title>
+    <link rel="icon" href="Assets/favicon.png" type="image/x-icon">
     <!--CSS Section-->
     <link rel="stylesheet" href="Contents/font-awesome.css" type="text/css" />
     <link rel="stylesheet" href="Contents/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="Contents/app.css" type="text/css">
 </head>
 
-<body>
-    <div class="container">
-        <h1>Member Registration</h1>
-        <h3>Please complete all the fields below:</h3>
-        
-        <form class="form-horizontal" novalidate>
-            <div class="form-group">
-                <label for="fname" class="col-sm-2 control-label">First Name</label>
-                <div class="col-sm-10">
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <!--Navigation-->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navigation-bar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand"><img src="Assets/logo.png" alt="Personal Logo" class="img-responsive"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navigation-bar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li> <a href="index.html#home"><i class="fa fa-home fa-lg"></i> HOME</a></li>
+                    <li> <a href="index.html#aboutMe"><i class="fa fa-info-circle fa-lg"></i> ABOUT</a> </li>
+                    <li class="active"> <a href="index.html#projects"><i class="fa fa-folder fa-lg"></i> PROJECTS</a> </li>
+                    <li> <a href="index.html#contactMe"><i class="fa fa-envelope fa-lg"></i> CONTACT</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header>
+        <div class="jumbotron text-center">
+            <h1>Assignment #2</h1>
+            <h3>COMP229: Adv. Web Applications Development</h3>
+        </div>
+    </header>
+
+    <!--Body-->
+    <div class="container-fluid section">
+        <br><br>
+        <h2 class="section-header">MEMBER REGISTRATION <i class="fa fa-user-plus"></i></h2>
+        <hr>
+        <p class="text-center col-sm-12">
+            <b>Instructions</b>: <u>Please complete all the fields below.</u>
+        </p>
+        <br><br>
+        <form class="form-horizontal well" id="registrationForm" novalidate>
+            <div class="form-group has-feedback has-error">
+                <label for="fname" class="col-sm-offset-1 col-sm-2 control-label">First Name</label>
+                <div class="col-sm-6">
                     <input type="text" class="form-control" id="fname" placeholder="Enter First Name">
+                     <span class="fa fa-remove form-control-feedback"></span>
                 </div>
             </div>
             <div class="form-group">
-                <label for="lname" class="col-sm-2 control-label">Last Name</label>
-                <div class="col-sm-10">
+                <label for="lname" class="col-sm-offset-1 col-sm-2 control-label">Last Name</label>
+                <div class="col-sm-6">
                     <input type="text" class="form-control" id="lname" placeholder="Enter Last Name">
                 </div>
             </div>
             <div class="form-group">
-                <label for="addr" class="col-sm-2 control-label">Address</label>
-                <div class="col-sm-10">
+                <label for="addr" class="col-sm-offset-1 col-sm-2 control-label">Address</label>
+                <div class="col-sm-6">
                     <input type="text" class="form-control" id="addr" placeholder="Enter your Address">
                 </div>
             </div>
             <div class="form-group">
-                <label for="city" class="col-sm-2 control-label">City</label>
-                <div class="col-sm-10">
+                <label for="city" class="col-sm-offset-1 col-sm-2 control-label">City</label>
+                <div class="col-sm-6">
                     <input type="text" class="form-control" id="city" placeholder="Enter your City">
                 </div>
             </div>
             <div class="form-group">
-                <label for="postcode" class="col-sm-2 control-label">Postal Code</label>
-                <div class="col-sm-10">
+                <label for="postcode" class="col-sm-offset-1 col-sm-2 control-label">Postal Code</label>
+                <div class="col-sm-6">
                     <input type="text" class="form-control" id="postcode" placeholder="Enter your Postal Code">
                 </div>
             </div>
             <div class="form-group">
-                <label for="prov" class="col-sm-2 control-label">Province (select one)</label>
-                <div class="col-sm-10">
+                <label for="prov" class="col-sm-offset-1 col-sm-2 control-label">Province (select one)</label>
+                <div class="col-sm-6">
                     <select class="form-control" id="prov">
                         <option value="Alberta">AB - Alberta</option>
                         <option value="Ontario">ON - Ontario</option>
@@ -66,40 +108,55 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="age" class="col-sm-2 control-label">Age</label>
-                <div class="col-sm-10">
+                <label for="age" class="col-sm-offset-1 col-sm-2 control-label">Age</label>
+                <div class="col-sm-6">
                     <input type="number" class="form-control" id="age" placeholder="Enter your Age">
                 </div>
             </div>
             <div class="form-group">
-                <label for="passwrd" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
+                <label for="passwrd" class="col-sm-offset-1 col-sm-2 control-label">Password</label>
+                <div class="col-sm-6">
                     <input type="password" class="form-control" id="passwrd" placeholder="Enter a Password">
                 </div>
             </div>
             <div class="form-group">
-                <label for="confirmpass" class="col-sm-2 control-label">Confirm Password</label>
-                <div class="col-sm-10">
+                <label for="confirmpass" class="col-sm-offset-1 col-sm-2 control-label">Confirm Password</label>
+                <div class="col-sm-6">
                     <input type="password" class="form-control" id="confirmpass" placeholder="Confirm Password">
                 </div>
             </div>
             <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
+                <label for="email" class="col-sm-offset-1 col-sm-2 control-label">Email</label>
+                <div class="col-sm-6">
                     <input type="email" class="form-control" id="email" placeholder="Enter your Email">
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Register Now</button>
-                    <button type="reset" class="btn btn-default">Clear Form</button>
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary">Register Now</button>
+                    <button type="reset" class="btn btn-danger">Clear Form</button>
                 </div>
             </div>
         </form>
     </div>
+
+    <!--Footer-->
+    <footer class="container-fluid">
+        <div class="footer-text col-sm-12">
+            &copy;&nbsp;2016 Kevin Ma | Student #: 300867968. All Rights Reserved.<br>
+            <span style="font-size:25px">
+                <a href="https://www.facebook.com/kbma.kevin"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/nubiak77/"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/kevinkbma"><i class="fa fa-twitter-square"></i></a>
+                <a href="#contactMe"><i class="fa fa-envelope-square"></i></a>
+            </span>
+        </div>
+    </footer>
+
     <!--JavaScript Section-->
     <script src="Scripts/jquery-2.2.4.min.js"></script>
     <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/app.js"></script>
 </body>
 
 </html>

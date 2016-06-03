@@ -1,155 +1,162 @@
 <!--
 	Developed by: Kevin Ma
 	Student #: 300867968
-	Last Modified: May 24, 2016
+    Date Created: May 29, 2016
+	Last Modified: June 3, 2016
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kevin Ma - Home Page - COMP229</title>
-	<link rel="icon" href="Assets/favicon.png" type="image/x-icon">
-	<!-- CSS Section -->
-	<link rel="stylesheet" href="Contents/font-awesome.css" type="text/css" />
-	<link rel="stylesheet" href="Contents/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="Contents/app.css" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Kevin Ma</title>
+    <link rel="icon" href="Assets/favicon.png" type="image/x-icon">
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="Contents/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="Contents/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="Contents/app.css" type="text/css">
 </head>
 
-<body>
-	<nav class="navbar navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-			<!--Brand and toggle get grouped for better mobile display-->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        					<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-				<a href="#home" class="navbar-brand"><img src="Assets/logo.png" alt="Personal Logo" class="img-responsive"></a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-right">
-				<ul class="nav navbar-nav">
-					<li> <a href="#home" class="current" id="homenav"><i class="fa fa-home fa-lg"></i> HOME</a> </li>
-					<li> <a href="#aboutMe" id="aboutnav"><i class="fa fa-info-circle fa-lg"></i> ABOUT</a> </li>
-					<li> <a href="#contactMe" id="contactnav"><i class="fa fa-envelope fa-lg"></i> CONTACT</a> </li>
-					<li> <a href="#projects" id="projectnav"><i class="fa fa-folder fa-lg"></i> PROJECTS</a> </li>
-				</ul>
-			</div>
-	</nav>
-	<div class="container-fluid">
-		<!--Header-->
-		<div class="home" id="home">
-			<header>
-				<span class="headerText">
-				<h1>H I,&nbsp;&nbsp;&nbsp;I ' M&nbsp;&nbsp;&nbsp;K E V I N</h1>
-				<h3>Undergraduate Student | Software Engineer</h3>
-				<!--<a href="#aboutMe"><button class="btn home-btn">DISCOVER WHO I AM <i class="fa fa-info-circle"></i></button></a><br>
-				<a href="#contactMe"><button class="btn home-btn">GET IN TOUCH WITH ME <i class="fa fa-envelope"></i></button></a><br>
-				<a href="#projects"><button class="btn home-btn">SEE MY PORTFOLIO <i class="fa fa-folder"></i></button></a><br>-->
-				<a href="#aboutMe"><button class="btn home-btn">DISCOVER WHO I AM</button></a><br>
-				<a href="#contactMe"><button class="btn home-btn">GET IN TOUCH WITH ME</button></a><br>
-				<a href="#projects"><button class="btn home-btn">SEE MY PORTFOLIO</button></a><br>
-			</span>
-			</header>
-		</div>
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="50">
 
-		<article>
-			<!--About Me-->
-			<div class="aboutme" id="aboutMe">
-				<br><br><br><br><br>
-				<h2 class="sectionheader">ABOUT ME <i class="fa fa-info-circle"></i></h2>
-				<hr>
-				<br><br>
-				<img src="Assets/profilepicture.jpg" alt="Picture of Me" class="profilepicture img-responsive">
-				<p class="description" id="about">
-					I am an undergraduate student enrolled in the Software Engineering Technology Co-op Program at the Progress Campus of Centennial
-					College. Currently, I am in my second semester and taking four classes. Previously, I studied at Western University
-					in London, ON.
-				</p>
-				<div class="hobbies">
-					<h4 class="sectionSubHead">Some of my favourite activities are:</h4>
-					<ul>
-						<li class="hobbyItem">Developing Web Applications</li>
-						<li class="hobbyItem">Developing Application Softwares</li>
-						<li class="hobbyItem">Teaching</li>
-						<li class="hobbyItem">Reading Manga</li>
-						<li class="hobbyItem">Drawing</li>
-						<li class="hobbyItem">Sleeping</li>
-					</ul>
-				</div>
-				<div class="technicalSkills">
-					<h4 class="sectionSubHead">I have experience working with:</h4>
-					<ul>
-						<li class="skillsItem">C <i class="fa fa-hashtag"></i></li>
-						<li class="skillsItem">DB2 SQL 10.5.5 <i class="fa fa-database"></i></li>
-						<li class="skillsItem">HTML <i class="fa fa-html5"></i> /CSS <i class="fa fa-css3"></i></li>
-						<li class="skillsItem">JavaScript/jQuery</li>
-						<li class="skillsItem">RedHat Linux (CentOS-7) <i class="fa fa-linux"></i></li>
-						<li class="skillsItem">Microsoft Office 2013 <i class="fa fa-file-word-o"> <i class="fa fa-file-excel-o"> <i class="fa fa-file-powerpoint-o"></i></i>
-							</i>
-						</li>
-					</ul>
-				</div>
-				<div class="websiteStats">
-					<p class="lastmodstat"></p>
-				</div>
-			</div>
-			<!--Contact Me-->
-			<div class="contactMe" id="contactMe">
-				<br><br><br><br><br>
-				<h2 class="sectionheader">CONTACT ME <i class="fa fa-envelope-o"></i></h2>
-				<hr>
-				<br><br>
-				<p class="contactInstructions">
-					Thank you for your visit. I hope you enjoyed your stay. <br> Feel free to email me at <a href="mailto:kma45@my.centennialcollege.ca">kma45@my.centennialcollege.ca</a>					or send me a message below!
-				</p>
-				<form action="mailto:kma45@my.centennialcollege.ca" method="POST" class="contactForm" id="contactForm">
-					<input type="text" name="contactname" id="contactname" placeholder="Name* :" class="contactinput"><br><br>
-					<div class="errormsg" id="errname"></div>
-					<input type="text" name="contactemail" id="contactemail" placeholder="Email* :" class="contactinput"><br><br>
-					<div class="errormsg" id="erremail"></div>
-					<input type="text" name="contactsubject" id="contactsubject" placeholder="Subject* :" class="contactinput"><br><br>
-					<div class="errormsg" id="errsubject"></div>
-					<textarea name="message" id="message" rows="10" placeholder="Message* :" class="contactinput"></textarea><br>
-					<div class="errormsg" id="errmsg"></div>
-					<button class="btn btn-primary" id="submitbtn" type="submit">Send Message</button>
-					<button class="btn btn-danger" id="resetbtn" type="reset">Clear Form</button>
-					<div class="errormsg" id="sentmsg"></div>
-				</form>
-			</div>
-			<!--Projects-->
-			<div class="projects" id="projects">
-				<br><br><br><br><br>
-				<h2 class="sectionheader">PORTFOLIO <i class="fa fa-folder-open-o"></i></h2>
-				<hr>
-				<br><br>
-				<p>Coming soon!</p>
-				<br><br><br><br><br>
-			</div>
-		</article>
+    <!--Navigation-->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navigation-bar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand"><img src="Assets/logo.png" alt="Personal Logo" class="img-responsive"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navigation-bar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"> <a href="#home"><i class="fa fa-home fa-lg"></i> HOME</a></li>
+                    <li> <a href="#aboutMe"><i class="fa fa-info-circle fa-lg"></i> ABOUT</a> </li>
+                    <li class="dropdown">
+                        <a href="#projects" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-folder fa-lg"></i> PROJECTS
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                    </li>
+                    <!--<li> <a href="#projects"><i class="fa fa-folder fa-lg"></i> PROJECTS</a> </li>-->
+                    <li> <a href="#contactMe"><i class="fa fa-envelope fa-lg"></i> CONTACT</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-		<!--Footer-->
-		<footer>
-			<span class="footerText">
-			&copy;&nbsp;2016 Kevin Ma | Student #: 300867968. All Rights Reserved.
-			<ul style="font-size:25px">
-				<li class="footerLinks"><a href="https://www.facebook.com/kbma.kevin"><i class="fa fa-facebook-square"></i></a></li>
-				<li class="footerLinks"><a href="https://www.instagram.com/nubiak77/"><i class="fa fa-instagram"></i></a></li>
-				<li class="footerLinks"><a href="https://twitter.com/kevinkbma"><i class="fa fa-twitter-square"></i></a></li>
-				<li class="footerLinks"><a href="#contactMe"><i class="fa fa-envelope-square"></i></a></li>
-			</ul>
-		</span>
-		</footer>
-	</div>
-	<!-- JavaScript Section -->
-	<script src="Scripts/jquery-2.2.4.min.js"></script>
-	<script src="Scripts/bootstrap.js"></script>
-	<script src="Scripts/app.js"></script>
+    <!--Header-->
+    <!--Used inline style here because other pages won't have full screen header, dont want to mess up shared css page-->
+    <header id="home" style="
+    background-image:url('Assets/bg.png');
+    background-size: cover;
+    height:100vh;
+    ">
+        <div class="headerMask jumbotron" style="
+        height:100vh;
+        background-color:rgba(25,118,210,0.7);    
+        ">
+            <span class="headerText text-center" style="
+            position:absolute;
+            width:100vw;
+            top:40vh;
+            ">
+                <h1>H I, &nbsp;&nbsp;I ' M &nbsp;&nbsp;K E V I N</h1>
+                <h3>Undergraduate Student | Software Engineer</h3>
+                <a href="#aboutMe"><button class="btn home-btn">DISCOVER WHO I AM</button></a><br>
+                <a href="#contactMe"><button class="btn home-btn">GET IN TOUCH WITH ME</button></a><br>
+                <a href="#projects"><button class="btn home-btn">SEE MY PORTFOLIO</button></a><br>
+            </span>
+        </div>
+    </header>
+
+    <!--About Me-->
+    <div class="container-fluid section" id="aboutMe">
+        <br><br><br><br><br>
+        <h2 class="section-header">ABOUT ME <i class="fa fa-info-circle"></i></h2>
+        <hr>
+
+    </div>
+
+    <!--Projects-->
+    <div class="container-fluid section" id="projects">
+        <br><br><br><br><br>
+        <h2 class="section-header">PORTFOLIO <i class="fa fa-folder-open-o"></i></h2>
+        <hr>
+        <p class="text-center">
+            Coming soon!
+        </p>
+    </div>
+
+    <!--Contact Me-->
+    <div class="container-fluid section" id="contactMe">
+        <br><br><br><br><br>
+        <h2 class="section-header">CONTACT ME <i class="fa fa-envelope-o"></i></h2>
+        <hr>
+        <p class="text-center col-sm-12">
+            Thank you for your visit. I hope you enjoyed your stay. Feel free to email me at <a href="mailto:kma45@my.centennialcollege.ca"
+                style="text-decoration:underline;">kma45@my.centennialcollege.ca</a> or send me a message below!
+        </p>
+        <br><br>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Name:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="name" placeholder="Enter name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="email" placeholder="Enter email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="subject">Subject:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="message">Message:</label>
+                <div class="col-sm-8">
+                    <textarea id="message" rows="5" class="form-control" placeholder="Enter message"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--Footer-->
+    <footer class="container-fluid">
+        <div class="footer-text col-sm-12">
+            &copy;&nbsp;2016 Kevin Ma | Student #: 300867968. All Rights Reserved.<br>
+            <span style="font-size:25px">
+                <a href="https://www.facebook.com/kbma.kevin"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/nubiak77/"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/kevinkbma"><i class="fa fa-twitter-square"></i></a>
+                <a href="#contactMe"><i class="fa fa-envelope-square"></i></a>
+            </span>
+        </div>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/app.js"></script>
 </body>
 
 </html>
