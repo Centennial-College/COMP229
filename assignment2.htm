@@ -19,7 +19,7 @@
 </head>
 
 
-<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
 
     <!--Navigation-->
     <nav class="navbar navbar-fixed-top">
@@ -31,7 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand"><img src="Assets/logo.png" alt="Personal Logo" class="img-responsive"></a>
+                <a href="index.html" class="navbar-brand"><img src="Assets/logo.png" alt="Personal Logo" class="img-responsive"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navigation-bar">
@@ -54,7 +54,7 @@
     </header>
 
     <!--Body-->
-    <div class="container-fluid section">
+    <div class="container-fluid section" id="assignment2top">
         <br><br>
         <h2 class="section-header">MEMBER REGISTRATION <i class="fa fa-user-plus"></i></h2>
         <hr>
@@ -62,39 +62,43 @@
             <b>Instructions</b>: <u>Please complete all the fields below.</u>
         </p>
         <br><br>
-        <form class="form-horizontal well" id="registrationForm" novalidate>
-            <div class="form-group has-feedback has-error">
-                <label for="fname" class="col-sm-offset-1 col-sm-2 control-label">First Name</label>
+        <form class="form-horizontal" id="registrationForm" novalidate>
+            <div class="form-group has-feedback" id="fnameDiv">
+                <label for="fname" class="col-sm-offset-1 col-sm-2 control-label has-feedback">First Name</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="fname" placeholder="Enter First Name">
-                     <span class="fa fa-remove form-control-feedback"></span>
+                    <span class="form-control-feedback fa" id="fnameIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="lnameDiv">
                 <label for="lname" class="col-sm-offset-1 col-sm-2 control-label">Last Name</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="lname" placeholder="Enter Last Name">
+                    <span class="form-control-feedback fa" id="lnameIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="addrDiv">
                 <label for="addr" class="col-sm-offset-1 col-sm-2 control-label">Address</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="addr" placeholder="Enter your Address">
+                    <span class="form-control-feedback fa" id="addrIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="cityDiv">
                 <label for="city" class="col-sm-offset-1 col-sm-2 control-label">City</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="city" placeholder="Enter your City">
+                    <span class="form-control-feedback fa" id="cityIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="postcodeDiv">
                 <label for="postcode" class="col-sm-offset-1 col-sm-2 control-label">Postal Code</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="postcode" placeholder="Enter your Postal Code">
+                    <span class="form-control-feedback fa" id="postcodeIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="provDiv">
                 <label for="prov" class="col-sm-offset-1 col-sm-2 control-label">Province (select one)</label>
                 <div class="col-sm-6">
                     <select class="form-control" id="prov">
@@ -105,36 +109,62 @@
                         <option value="Nova Scotia">NS - Nova Scotia</option>
                         <option value="New Brunswick">NB - New Brunswick</option>
                     </select>
+                    <span class="form-control-feedback fa" id="provIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="ageDiv">
                 <label for="age" class="col-sm-offset-1 col-sm-2 control-label">Age</label>
                 <div class="col-sm-6">
                     <input type="number" class="form-control" id="age" placeholder="Enter your Age">
+                    <span class="form-control-feedback fa" id="ageIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="passwrdDiv">
                 <label for="passwrd" class="col-sm-offset-1 col-sm-2 control-label">Password</label>
                 <div class="col-sm-6">
                     <input type="password" class="form-control" id="passwrd" placeholder="Enter a Password">
+                    <span class="form-control-feedback fa" id="passwrdIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="confirmpassDiv">
                 <label for="confirmpass" class="col-sm-offset-1 col-sm-2 control-label">Confirm Password</label>
                 <div class="col-sm-6">
                     <input type="password" class="form-control" id="confirmpass" placeholder="Confirm Password">
+                    <span class="form-control-feedback fa" id="confirmpassIco"></span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group has-feedback" id="emailDiv">
                 <label for="email" class="col-sm-offset-1 col-sm-2 control-label">Email</label>
                 <div class="col-sm-6">
                     <input type="email" class="form-control" id="email" placeholder="Enter your Email">
+                    <span class="form-control-feedback fa" id="emailIco"></span>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-12 text-center">
-                    <button type="submit" class="btn btn-primary">Register Now</button>
-                    <button type="reset" class="btn btn-danger">Clear Form</button>
+                    <!-- Trigger the modal with a button -->
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#submitModal">Register Now</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="submitModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Modal Header</h4>
+                                </div>
+                                <div class="modal-body text-left" style="padding-left:5vh">
+                                    <p>Some text in the modal.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <a href="#assignment2top" id="resetRegForm" class="btn btn-danger">Clear Form</a>
                 </div>
             </div>
         </form>
