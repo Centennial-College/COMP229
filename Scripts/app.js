@@ -19,6 +19,12 @@
         $('html, body').animate({ scrollTop: target.offset().top }, 750)
     })
 
+    // Code written here only executes for Home Page
+    if ($('#home').length) {
+        $('.lastmodstat').html('This webpage was last modified on ' + document.lastModified);
+
+    }
+
     // Code written here only executes for Assignment 2 
     if ($('#registrationForm').length) {
 
