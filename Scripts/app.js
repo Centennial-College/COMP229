@@ -2,18 +2,27 @@
  * FileName: app.js
  * 
  * @author Kevin Ma
- * @date June 3, 2016
+ * @date June 5, 2016
  * 
  * Student #: 300867968
- * Website: 
+ * Website: http://studentweb.cencol.ca/kma45 
  * 
  * @description This file is the main javascript file for the website
  */
 
+/**
+ * This immediately invoked function expression (IIFE) contains all the code
+ * which will run when the webpage loads the javascript file
+ */
 (function () {
 
-    // the jquery .on() method attaches one or more event handlers for selected elements and child elements
+    /**
+     * This event handler smoothly scrolls the window to the target
+     * location (target div).
+     */
     $('a[href^="#"]').on('click', function (event) {
+        // the jquery .on() method attaches one or more event handlers for selected elements and child elements
+
         event.preventDefault()
         var target = $($(this).attr('href'))
         $('html, body').animate({ scrollTop: target.offset().top }, 750)
@@ -21,7 +30,7 @@
 
     // Code written here only executes for Home Page
     if ($('#home').length) {
-        $('.lastmodstat').html('This webpage was last modified on ' + document.lastModified);
+        $('.lastmodstat').html('This webpage was last modified on ' + document.lastModified)
 
     }
 
@@ -78,10 +87,16 @@
 
         $('#registrationForm').submit(function (event) {
             event.preventDefault()
+            
             // if all the inputs are not validated, the form will not successfully submit
             if ($('.has-success').length != 10) {
                 var tempStr = 'Fix the following errors and submit again!<br><br><li>Please fill out all fields.</li>'
+                
+                // Adds the appropiate title to the Modal which pops up
                 $('#submitModal h4').html('Registration Failed')
+                
+                // Appropiate messages are appended to the instructions based on what
+                // caused the errors in validating the form
                 if ($('#postcodeDiv').hasClass('has-error')) {
                     tempStr += '<li>The postal code must be 6 characters long and in a0a0a0 format.</li>'
                 }
@@ -99,9 +114,15 @@
                 }
                 $('#submitModal p').html(tempStr)
             }
+            // All inputs are validated in the form
             else {
+                // Modal Title
                 $('#submitModal h4').html('Registration Recieved')
+                
+                //Modal Body
                 $('#submitModal p').html('Thanks for registering with our website, your customer record was saved successfully.')
+                
+                // Resets the form after the form is "submitted"
                 clearForm()
             }
         })
@@ -113,6 +134,14 @@
     }
 
     // NAMED FUNCTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    /**
+     * This method removes all success/fail indicators from form fields and 
+     * sets all form fields on the webpage to have a null value.
+     * 
+     * @method clearForm
+     * @return {void}
+     */
     function clearForm() {
         $('input').each(function () {
             $(this).val('')
@@ -126,6 +155,15 @@
         })
     }
 
+    /**
+     * This method removes all success indicators from a form field and
+     * adds error indicators to its related div and span.
+     * 
+     * @method isInvalidFormInput 
+     * @return {void}
+     * @param {HTML div} formDiv 
+     * @param {HTML span} formIcon
+     */
     function isInvalidFormInput(formDiv, formIcon) {
         $(formDiv).removeClass('has-success')
         $(formDiv).addClass('has-error')
@@ -133,6 +171,15 @@
         $(formIcon).addClass('fa-remove')
     }
 
+    /**
+     * This method removes all error indicators from a form field and
+     * adds success indicators to its related div and span.
+     * 
+     * @method isValidFormInput
+     * @return {void}
+     * @param {HTML div} formDiv
+     * @param {HTML span} formIcon
+     */
     function isValidFormInput(formDiv, formIcon) {
         $(formDiv).removeClass('has-error')
         $(formDiv).addClass('has-success')
@@ -140,6 +187,20 @@
         $(formIcon).addClass('fa-check')
     }
 
+    /**
+     * This method checks whether a given input field has a
+     * value or whether it is null. If the field contains
+     * a null value, error indicators are added to the field's
+     * related div and span. If there is a non-null value in 
+     * the field, success indicators are added to the field's 
+     * related div and span.
+     * 
+     * @method isNull
+     * @return {void}
+     * @param {HTML input} element
+     * @param {HTML div} formDiv
+     * @param {HTML span} formIcon
+     */
     function isNull(element, formDiv, formIcon) {
         if ($(element).val()) {
             isValidFormInput(formDiv, formIcon)
@@ -149,6 +210,18 @@
         }
     }
 
+    /**
+     * This method checks whether the element has the appropiate
+     * format to be a valid email. The proper syntax as a regular 
+     * expression is denoted as
+     * /^[a-zA-Z0-9\\-]+(\.[\w\\-]+)*@[a-zA-Z0-9]+(\.[a-zA-Z0-9\\-]+)*(\.[a-z]{2,6})$/
+     * If the element contains an invalid email format, error
+     * indciators are added to the element's related div and span.
+     * 
+     * @method isValidEmail
+     * @return {void}
+     * @param {HTML input} element
+     */
     function isValidEmail(element) {
         if (!/^[a-zA-Z0-9\\-]+(\.[\w\\-]+)*@[a-zA-Z0-9]+(\.[a-zA-Z0-9\\-]+)*(\.[a-z]{2,6})$/.test($(element).val())) {
             isInvalidFormInput('#' + element.id + 'Div', '#' + element.id + 'Ico')
